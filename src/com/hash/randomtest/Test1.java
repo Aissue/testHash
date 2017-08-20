@@ -1,5 +1,6 @@
 package com.hash.randomtest;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -7,6 +8,7 @@ import java.util.*;
  * Created by Administrator on 2017/8/20.
  */
 public class Test1 {
+    public static String hisDate;
     public static Random random = new Random();
     public static Set set = new HashSet();
     public static String generate(int length) {
@@ -16,7 +18,7 @@ public class Test1 {
             return generate(length);
         }else{
             set.add(result);
-            return String.format(format,Math.abs(result));
+            return String.format(format,result);
         }
     }
     public static void main(String[] args) {
